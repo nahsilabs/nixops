@@ -1,6 +1,6 @@
 let
   nfsMount = path: remotePath: {
-    device = "nfs.lan:${remotePath}";
+    device = "10.2.10.41:${remotePath}";
     fsType = "nfs4";
     options = [
       "rw"
