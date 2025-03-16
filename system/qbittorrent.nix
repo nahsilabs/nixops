@@ -1,4 +1,3 @@
-{ _ }:
 {
   services.qbittorrent = {
     enable = true;
