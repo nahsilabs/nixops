@@ -33,7 +33,7 @@
               prefixLength = 32;
             }
           ];
-          router = {
+          routes = {
             network = "0.0.0.0/0";
             via = "37.98.199.179";
             onlink = true;
