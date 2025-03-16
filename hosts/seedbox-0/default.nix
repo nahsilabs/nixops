@@ -11,4 +11,6 @@
     ../../system/internalisation.nix
     ../../system/qbittorrent.nix
   ];
+
+  networking.hostName = "seedbox-0";
 }

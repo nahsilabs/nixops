@@ -11,4 +11,6 @@ _:
     ../../system/packages.nix
     ../../system/internalisation.nix
   ];
+
+  networking.hostName = (import ../../vars.nix).hostname;
 }

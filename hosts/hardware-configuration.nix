@@ -1,14 +1,21 @@
-{ lib, system, ... }:
+{
+  pkgs,
+  lib,
+  system,
+  ...
+}:
 
 {
+  imports = [
+    "${pkgs.path}/nixos/modules/profiles/qemu-guest.nix"
+    "${pkgs.path}/nixos/modules/profiles/minimal.nix"
+  ];
+
   boot = {
     supportedFilesystems = [
       "ext4"
-      "btrfs"
       "xfs"
-      "fat"
       "vfat"
-      "cifs"
       "nfs"
     ];
     growPartition = true;
@@ -18,27 +25,6 @@
       systemd-boot = {
         enable = true;
       };
-      # wait for 3 seconds to select the boot entry
-      # timeout = lib.mkForce 3;
-    };
-
-    initrd = {
-      availableKernelModules = [
-        "9p"
-        "9pnet_virtio"
-        "ata_piix"
-        "uhci_hcd"
-        "virtio_blk"
-        "virtio_mmio"
-        "virtio_net"
-        "virtio_pci"
-        "virtio_scsi"
-      ];
-      kernelModules = [
-        "virtio_balloon"
-        "virtio_console"
-        "virtio_rng"
-      ];
     };
 
     # clear /tmp on boot to get a stateless /tmp directory.
