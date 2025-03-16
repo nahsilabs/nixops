@@ -15,5 +15,6 @@ in
 {
   fileSystems = {
     "/mnt/video" = nfsMount "/mnt/video" "/mnt/storage/media/video";
+    "/mnt/downloads" = nfsMount "/mnt/downloads" "/mnt/storage/downloads";
   };
 }

@@ -13,7 +13,10 @@
   ];
 
   networking.hostName = "seedbox-0";
-  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+  networking.nameservers = [
+    "1.1.1.1"
+    "9.9.9.9"
+  ];
 
   # pull configuration from a repo
   services.comin = {
