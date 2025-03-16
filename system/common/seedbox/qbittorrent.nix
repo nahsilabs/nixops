@@ -8,6 +8,9 @@
     qbittorrent = {
       isSystemUser = true;
       group = "qbittorrent";
+      extraGroups = [
+        "nogroup"
+      ];
     };
   };
 
