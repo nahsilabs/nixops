@@ -1,4 +1,8 @@
 {
+  networking.firewall.allowedTCPPorts = [
+    39604
+  ];
+
   services.qbittorrent = {
     enable = true;
     webuiPort = 8080;
@@ -8,7 +12,7 @@
       Preferences = {
         Downloads.SavePath = "/mnt/downloads";
         WebUI = {
-          Username = "admin";
+          Username = "nahsi";
         };
       };
     };

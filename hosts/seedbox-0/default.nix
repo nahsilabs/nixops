@@ -9,7 +9,7 @@
     ../../system/services.nix
     ../../system/packages.nix
     ../../system/internalisation.nix
-    ../../system/qbittorrent.nix
+    ../../system/common/seedbox
   ];
 
   networking.hostName = "seedbox-0";

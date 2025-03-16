@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   # Packages
@@ -10,5 +10,6 @@
     wget
     curl
     btop
+    inputs.ragenix.packages.${pkgs.system}.default
   ];
 }

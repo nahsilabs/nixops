@@ -8,6 +8,10 @@
       url = "github:nlewo/comin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ragenix = {
+      url = "github:yaxitech/ragenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -15,6 +19,7 @@
       self,
       nixpkgs,
       comin,
+      ragenix,
       ...
     }@inputs:
     with inputs;
@@ -57,6 +62,7 @@
           modules = [
             "${nixpkgs}/nixos/modules/virtualisation/proxmox-image.nix"
             ./hosts/proxmox-init
+            ragenix.nixosModules.default
             {
               proxmox = {
                 # Reference: https://pve.proxmox.com/wiki/Qemu/KVM_Virtual_Machines#qm_virtual_machines_settings
@@ -84,6 +90,7 @@
           inherit specialArgs;
           modules = [
             comin.nixosModules.comin
+            ragenix.nixosModules.default
             ./modules/qbittorrent
             ./hosts/seedbox-0
           ];
