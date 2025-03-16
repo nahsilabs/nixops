@@ -81,12 +81,12 @@
           ];
         };
 
-        seed-0 = nixpkgs.lib.nixosSystem {
+        seedbox-0 = lib.nixosSystem {
           inherit specialArgs;
           modules = [
             comin.nixosModules.comin
             ./modules/qbittorrent
-            ./hosts/seed-0
+            ./hosts/seedbox-0
           ];
         };
       };
