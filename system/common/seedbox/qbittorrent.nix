@@ -36,9 +36,9 @@
         AlternativeGlobalDLSpeedLimit = 18000;
         AlternativeGlobalUPSpeedLimit = 18000;
 
-        CoalesceReadWrite = true;
+        CoalesceReadWrite = false;
         DiskCacheSize = 1024;
-        DiskIOReadMode = "EnableOSCache";
+        DiskIOReadMode = "DisableOSCache";
         DiskIOType = "Default";
         DiskIOWriteMode = "DisableOSCache";
 
