@@ -55,7 +55,6 @@
         proxmox-init = lib.nixosSystem {
           inherit specialArgs;
           modules = [
-            comin.nixosModules.comin
             "${nixpkgs}/nixos/modules/virtualisation/proxmox-image.nix"
             ./hosts/proxmox-init
             {
