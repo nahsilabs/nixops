@@ -26,12 +26,19 @@
     interfaces = {
       enp6s18 = {
         useDHCP = false;
-        ipv4.addresses = [
-          {
-            address = "37.98.199.189";
-            prefixLength = 32;
-          }
-        ];
+        ipv4 = {
+          addresses = [
+            {
+              address = "37.98.199.189";
+              prefixLength = 32;
+            }
+          ];
+          router = {
+            network = "0.0.0.0/0";
+            via = "37.98.199.179";
+            onlink = true;
+          };
+        };
       };
       enp6s19 = {
         useDHCP = false;
