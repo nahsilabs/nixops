@@ -21,7 +21,7 @@
         MemoryWorkingSetLimit = 1024;
       };
       BitTorrent.Session = {
-        Interface = "eth0";
+        Interface = "enp6s18";
         AsyncIOThreadsCount = 16;
         Encryption = 1;
         HashingThreadsCount = 4;
