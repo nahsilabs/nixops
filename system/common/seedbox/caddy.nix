@@ -13,6 +13,9 @@
         protocols tls1.3
       }
     '';
+    globalConfig = ''
+      admin off
+    '';
   };
 
   systemd.services.caddy.serviceConfig = {
