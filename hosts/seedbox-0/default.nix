@@ -33,11 +33,14 @@
               prefixLength = 32;
             }
           ];
-          routes = {
-            network = "0.0.0.0/0";
-            via = "37.98.199.179";
-            onlink = true;
-          };
+          routes = [
+            {
+              address = "0.0.0.0";
+              prefixLength = 0;
+              via = "37.98.199.179";
+              options.onlink = "true";
+            }
+          ];
         };
       };
       enp6s19 = {
