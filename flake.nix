@@ -81,7 +81,7 @@
           ];
         };
 
-        seed-0 = lib.nixosSystem {
+        seed-0 = nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           modules = [
             comin.nixosModules.comin
