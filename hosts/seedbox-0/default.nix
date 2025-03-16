@@ -22,7 +22,6 @@
         name = "origin";
         url = "https://github.com/nahsilabs/nixops.git";
         branches.main.name = "master";
-        hostname = "seedbox-0";
       }
     ];
   };
