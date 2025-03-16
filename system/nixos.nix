@@ -1,11 +1,16 @@
-{ pkgs, lib, user, ... }:
+{
+  pkgs,
+  lib,
+  user,
+  ...
+}:
 
 {
   # Nix settings
   # Ref: https://nixos.wiki/wiki/Nixos-rebuild
   nix = {
     # enable flake
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     extraOptions = "experimental-features = nix-command flakes";
     settings = {
       # enable auto-cleanup
@@ -14,7 +19,10 @@
       max-jobs = lib.mkDefault 8;
       # enable ccache (local compilation)
       # extra-sandbox-paths = [ config.programs.ccache.cacheDir ];
-      trusted-users = [ "root" user ];
+      trusted-users = [
+        "root"
+        user
+      ];
       # trusted-public-keys = [ ];
 
       # substituers will be appended to the default substituters when fetching packages
@@ -33,5 +41,5 @@
     };
   };
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }

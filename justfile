@@ -41,7 +41,7 @@ update-input input:
 
 # nix-prefetch-url
 prefetch-url url:
-  @nix-prefetch-url --type sha256 '{{ url }}' | xargs nix hash to-sri --type sha256
+  @nix-prefetch-url --type sha256 '{{ url }}' | xargs nix hash convert --to sri --hash-algo sha256
 
 # nix-prefetch-git
 prefetch-git repo rev:

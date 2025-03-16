@@ -1,4 +1,9 @@
-{ pkgs, config, user, ... }:
+{
+  pkgs,
+  config,
+  user,
+  ...
+}:
 
 let
   keyFiles = [
@@ -6,8 +11,8 @@ let
       # replace <github_user> with your own ssh key!
       # command to generate the hash:
       # nix-prefetch-url --type sha256 'https://github.com/<github_user>.gpg' | xargs nix hash to-sri --type sha256
-      url = "https://github.com/<github_user>.keys";
-      hash = "sha256-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+      url = "https://github.com/nahsi.keys";
+      hash = "sha256-OpQNpXKkEXeqcpObJajkMoNNVKAwJFdYp3pAtp0EJes=";
     })
   ];
 in

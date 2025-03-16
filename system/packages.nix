@@ -8,5 +8,7 @@
     git
     vim
     wget
+    curl
+    btop
   ];
 }
