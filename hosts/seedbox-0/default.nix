@@ -19,23 +19,26 @@
       "9.9.9.9"
     ];
 
-    defaultGateway = "37.98.199.179";
+    defaultGateway = {
+      address = "37.98.199.179";
+      interface = "enp6s18";
+    };
     interfaces = {
-      enp6s19 = {
-        useDHCP = false;
-        ipv4.addresses = [
-          {
-            address = "10.2.10.9";
-            prefixLength = 24;
-          }
-        ];
-      };
       enp6s18 = {
         useDHCP = false;
         ipv4.addresses = [
           {
             address = "37.98.199.189";
             prefixLength = 32;
+          }
+        ];
+      };
+      enp6s19 = {
+        useDHCP = false;
+        ipv4.addresses = [
+          {
+            address = "10.2.10.9";
+            prefixLength = 24;
           }
         ];
       };
