@@ -1,7 +1,7 @@
 {
   services.qbittorrent = {
     enable = true;
-    webuiPort = 443;
+    webuiPort = 8080;
     torrentingPort = 39604;
     settings = {
       LegalNotice.Accepted = true;
