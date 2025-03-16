@@ -1,6 +1,8 @@
 { lib, ... }:
 
 {
+  security.sudo.wheelNeedsPassword = false;
+
   # enable openssh
   services.openssh = {
     enable = true;
