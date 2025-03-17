@@ -32,10 +32,10 @@
 
         BandwidthSchedulerEnabled = true;
         UseAlternativeGlobalSpeedLimit = true;
-        GlobalDLSpeedLimit = 32000;
-        GlobalUPSpeedLimit = 32000;
-        AlternativeGlobalDLSpeedLimit = 18000;
-        AlternativeGlobalUPSpeedLimit = 18000;
+        GlobalDLSpeedLimit = 52000;
+        GlobalUPSpeedLimit = 52000;
+        AlternativeGlobalDLSpeedLimit = 24000;
+        AlternativeGlobalUPSpeedLimit = 24000;
 
         FilePoolSize = 100;
         MaxActiveCheckingTorrents = 4;
@@ -48,14 +48,14 @@
 
         AsyncIOThreadsCount = 16;
         HashingThreadsCount = 4;
-        CheckingMemUsageSize = 128;
+        CheckingMemUsageSize = 256;
 
         CoalesceReadWrite = true;
         DiskCacheSize = 2048;
         DiskQueueSize = 268435456;
-        DiskIOReadMode = "EnableOSCache";
         DiskIOType = "Default";
-        DiskIOWriteMode = "DisableOSCache";
+        DiskIOReadMode = "EnableOSCache";
+        DiskIOWriteMode = "EnableOSCache";
 
         TempPath = "/mnt/incomplete";
         TempPathEnabled = true;
