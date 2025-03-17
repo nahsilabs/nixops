@@ -41,7 +41,7 @@
         MaxActiveCheckingTorrents = 4;
         MaxActiveDownloads = 1;
         MaxActiveTorrents = 500;
-        MaxActiveUploads = 50;
+        MaxActiveUploads = 1000;
         MaxConnections = 1000;
         MaxUploads = 100;
         MaxUploadsPerTorrent = 5;
