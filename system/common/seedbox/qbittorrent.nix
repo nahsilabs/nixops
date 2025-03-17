@@ -21,16 +21,14 @@
     settings = {
       LegalNotice.Accepted = true;
       Application = {
-        MemoryWorkingSetLimit = 1024;
+        MemoryWorkingSetLimit = 3072;
       };
       BitTorrent.Session = {
         Interface = "enp6s18";
-        AsyncIOThreadsCount = 16;
         Encryption = 1;
-        HashingThreadsCount = 4;
-        CheckingMemUsageSize = 128;
         PieceExtentAffinity = true;
         SuggestMode = true;
+        PerformanceWarning = false;
 
         BandwidthSchedulerEnabled = true;
         UseAlternativeGlobalSpeedLimit = true;
@@ -39,9 +37,23 @@
         AlternativeGlobalDLSpeedLimit = 18000;
         AlternativeGlobalUPSpeedLimit = 18000;
 
-        CoalesceReadWrite = false;
-        DiskCacheSize = 1024;
-        DiskIOReadMode = "DisableOSCache";
+        FilePoolSize = 100;
+        MaxActiveCheckingTorrents = 4;
+        MaxActiveDownloads = 1;
+        MaxActiveTorrents = 500;
+        MaxActiveUploads = 50;
+        MaxConnections = 1000;
+        MaxUploads = 100;
+        MaxUploadsPerTorrent = 5;
+
+        AsyncIOThreadsCount = 16;
+        HashingThreadsCount = 4;
+        CheckingMemUsageSize = 128;
+
+        CoalesceReadWrite = true;
+        DiskCacheSize = 2048;
+        DiskQueueSize = 268435456;
+        DiskIOReadMode = "EnableOSCache";
         DiskIOType = "Default";
         DiskIOWriteMode = "DisableOSCache";
 
@@ -50,7 +62,7 @@
       };
 
       Preferences = {
-        Advanced.RecheckOnCompletion = true;
+        Advanced.RecheckOnCompletion = false;
         Downloads.SavePath = "/mnt/downloads";
         WebUI = {
           Username = "nahsi";
