@@ -5,6 +5,8 @@ let
     options = [
       "rw"
       "hard"
+      "tcp"
+      "async"
       "x-systemd.automount"
       "retrans=10"
       "timeo=30"
