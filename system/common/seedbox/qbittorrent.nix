@@ -30,7 +30,7 @@
         SuggestMode = true;
         PerformanceWarning = false;
 
-        BandwidthSchedulerEnabled = true;
+        BandwidthSchedulerEnabled = false;
         UseAlternativeGlobalSpeedLimit = true;
         GlobalDLSpeedLimit = 52000;
         GlobalUPSpeedLimit = 52000;
@@ -38,9 +38,9 @@
         AlternativeGlobalUPSpeedLimit = 24000;
 
         FilePoolSize = 100;
-        MaxActiveCheckingTorrents = 4;
+        MaxActiveCheckingTorrents = 1;
         MaxActiveDownloads = 1;
-        MaxActiveTorrents = 500;
+        MaxActiveTorrents = 1000;
         MaxActiveUploads = 1000;
         MaxConnections = 1000;
         MaxUploads = 100;
