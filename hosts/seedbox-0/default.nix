@@ -12,17 +12,25 @@
     ../../system/common/seedbox
   ];
 
+  systemd.network = {
+    enable = true;
+    networks."40-enp6s18".routes = [
+      {
+        routeConfig.Gateway = "37.98.199.179";
+        routeConfig.GatewayOnLink = true;
+      }
+    ];
+  };
+
   networking = {
+    useDHCP = false;
+    useNetworkd = true;
     hostName = "seedbox-0";
     nameservers = [
       "1.1.1.1"
       "9.9.9.9"
     ];
 
-    defaultGateway = {
-      address = "37.98.199.179";
-      interface = "enp6s18";
-    };
     interfaces = {
       enp6s18 = {
         useDHCP = false;
@@ -31,14 +39,6 @@
             {
               address = "37.98.199.189";
               prefixLength = 32;
-            }
-          ];
-          routes = [
-            {
-              address = "0.0.0.0";
-              prefixLength = 0;
-              via = "37.98.199.179";
-              options.onlink = "true";
             }
           ];
         };
