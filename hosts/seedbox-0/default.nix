@@ -16,8 +16,7 @@
     enable = true;
     networks."40-enp6s18".routes = [
       {
-        routeConfig.Gateway = "37.98.199.179";
-        routeConfig.GatewayOnLink = true;
+        routeConfig.Gateway = "10.2.14.1";
       }
     ];
   };
@@ -27,8 +26,7 @@
     useNetworkd = true;
     hostName = "seedbox-0";
     nameservers = [
-      "1.1.1.1"
-      "9.9.9.9"
+      "10.2.14.2"
     ];
 
     interfaces = {
@@ -37,8 +35,8 @@
         ipv4 = {
           addresses = [
             {
-              address = "37.98.199.189";
-              prefixLength = 32;
+              address = "10.2.14.189";
+              prefixLength = 24;
             }
           ];
         };
