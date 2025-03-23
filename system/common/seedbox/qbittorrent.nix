@@ -31,11 +31,11 @@
         PerformanceWarning = false;
 
         BandwidthSchedulerEnabled = false;
-        UseAlternativeGlobalSpeedLimit = true;
-        GlobalDLSpeedLimit = 52000;
-        GlobalUPSpeedLimit = 52000;
-        AlternativeGlobalDLSpeedLimit = 24000;
-        AlternativeGlobalUPSpeedLimit = 24000;
+        UseAlternativeGlobalSpeedLimit = false;
+        GlobalDLSpeedLimit = 0;
+        GlobalUPSpeedLimit = 0;
+        AlternativeGlobalDLSpeedLimit = 0;
+        AlternativeGlobalUPSpeedLimit = 0;
 
         FilePoolSize = 100;
         MaxActiveCheckingTorrents = 1;
