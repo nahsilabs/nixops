@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -7,4 +7,7 @@
   ];
 
   services.comin.hostname = "ct-test";
+  environment.systemPackages = with pkgs; [
+    vllm
+  ];
 }
