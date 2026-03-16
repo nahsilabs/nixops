@@ -19,10 +19,10 @@
 
   users.mutableUsers = false;
 
-  users.users.admin = {
+  users.users.nahsi = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-    users.users.admin.openssh.authorizedKeys.keys = [
+    openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILd/6tTC0ZiExgsuvZnJzF32mjFVJBRwZDcUuKb3d5ia nahsi@framework"
     ];
   };
