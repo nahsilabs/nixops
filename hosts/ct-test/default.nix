@@ -6,5 +6,5 @@
     ../../modules/proxmox-lxc.nix
   ];
 
-  networking.hostName = "ct-test";
+  services.comin.hostname = "ct-test";
 }
