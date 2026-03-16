@@ -19,10 +19,6 @@
 
   users.mutableUsers = false;
 
-  users.users.root = {
-    hashedPassword = "!";
-  };
-
   users.users.admin = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
