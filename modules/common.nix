@@ -44,21 +44,9 @@
     };
   };
 
-  services.comin = {
-    enable = true;
-
-    remotes = [
-      {
-        name = "origin";
-        url = "https://github.com/nahsilabs/nixops.git";
-        branches.main.name = "refactor";
-      }
-    ];
-  };
-
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 }
