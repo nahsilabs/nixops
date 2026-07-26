@@ -8,12 +8,18 @@
       url = "github:nlewo/comin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ragenix = {
+      url = "github:yaxitech/ragenix/83bccfdea758241999f32869fb6b36f7ac72f1ac";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     {
       nixpkgs,
       comin,
+      ragenix,
       ...
     }:
     let
@@ -27,6 +33,7 @@
           inherit system;
           modules = [
             comin.nixosModules.comin
+            ragenix.nixosModules.age
             hostPath
           ];
         };
@@ -38,6 +45,7 @@
       nixosConfigurations = {
         bootstrap = mkHost ./hosts/bootstrap/default.nix;
         ct-test = mkHost ./hosts/ct-test/default.nix;
+        lxc-bootstrap-prototype = mkHost ./hosts/lxc-bootstrap-prototype/default.nix;
       };
 
     };

@@ -6,7 +6,6 @@
   ];
 
   boot.isContainer = true;
-  nix.settings.sandbox = false;
 
   proxmoxLXC = {
     manageNetwork = false;
